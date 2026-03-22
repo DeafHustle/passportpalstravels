@@ -510,17 +510,9 @@
     .widget-zone {
       max-width: 1000px;
       margin: 40px auto 0;
-      padding: 32px;
-      border: 2px dashed rgba(11, 110, 110, 0.2);
+      padding: 16px 0;
       border-radius: var(--radius-lg);
       text-align: center;
-      background: rgba(11, 110, 110, 0.03);
-      display: none; /* Hidden by default - shown when Travelpayouts widget is embedded */
-    }
-
-    .widget-zone p {
-      color: var(--text-light);
-      font-size: 14px;
     }
 
     /* ========== DESTINATIONS ========== */
@@ -1471,9 +1463,15 @@
       ║  5. Remove the display:none from .widget-zone               ║
       ╚══════════════════════════════════════════════════════════════╝
     -->
-    <div class="widget-zone" id="travelpayoutsWidget">
-      <!-- Paste your Travelpayouts widget script here -->
-      <p>Flight search results will appear here</p>
+    <div class="widget-zone" id="travelpayoutsWidget" style="display:block;">
+      <script data-noptimize="1" data-cfasync="false" data-wpfc-render="false">
+        (function () {
+            var script = document.createElement("script");
+            script.async = 1;
+            script.src = 'https://tpembars.com/NTEwNDcz.js?t=510473';
+            document.head.appendChild(script);
+        })();
+      </script>
     </div>
   </section>
 
